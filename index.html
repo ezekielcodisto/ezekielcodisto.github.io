@@ -1,7 +1,6 @@
-<html>
-<head>
+<html><head>
 <!-- Facebook Pixel Code -->
-<script>
+<script src="https://connect.facebook.net/signals/config/638485013519781?v=2.9.31&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -13,12 +12,27 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '638485013519781');
 fbq('track', 'PageView');
 </script>
+  
+  <script>  
+    function placeOrder() {
+      console.log("Order in place");
+      fbq('track','PlaceOrder',{id:101,shipping:{city:'Angeles'},billing:{name:'zek'}}, {eventID:'EVENT_ID'});
+    }
+  </script>
+  
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=638485013519781&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
+  
+  
 </head>
 <body>
 <h1> FB Pixel Test </h1>
-</body>
-</html>
+
+
+<button type="button" onclick="placeOrder()">place</button>
+
+
+
+</body></html>
